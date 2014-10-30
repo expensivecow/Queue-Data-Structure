@@ -12,7 +12,7 @@ public:
   void push(int);
   int pop();
   void reSize(int);
-  void displayStack();
+  void displayQueue();
   int getMaxSize();
   int* returnArr();
 

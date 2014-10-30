@@ -39,7 +39,7 @@ void myQueue::reSize(int capacity) {
   return;
 }
 
-void myQueue::displayStack() {
+void myQueue::displayQueue() {
   //TODO: implement
   return;
 }
