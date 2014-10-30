@@ -1,1 +1,78 @@
+QUEUE FUNCTIONALITY (Array Implementation)
+
+Struct of Queue:
+1. int topIndex(points to the next spot for an element to be added)
+2. array[setsize] (initialized as a pointer with a set amount of memory)
+3. maxSize(denotes max length before you have to increase memory dynamically)
+
+Methods to implement:
+
+1. empty()
+
+   Function Prototype: bool empty(void)
+
+   Funcionality: Returns true if the queue is empty, false otherwise
+
+   Actual Implementation:
+
+2. size()
+
+   Function Prototype: int size(void)
+
+   Funcionality: Returns the length of the queue
+
+   Actual Implementation:
+
+3. push()
+
+   Function Prototype: void push(int)
+
+   Funcionality: Takes in an integer and pushes a value into the back of the queue
+
+   Actual Implementation:
+
+4. pop()
+
+   Function Prototype: int pop(void)
+
+   Funcionality: Returns the head of the queue
+
+   Actual Implementation:
+
+5. reSize()
+
+   Function Prototype: void reSize(int)
+
+   Funcionality: Resizes the target to the integer put into the function
+
+   Actual Implementation:
+
+6. displayQueue()
+
+   Function Prototype: void displayQueue(void)
+
+   Funcionality: Displays the given queue on screen
+
+   Actual Implementation:
+
+7. getMaxSize() 
+
+   Function Prototype: int getMaxSize(void)
+
+   Funcionality: Returns the maxSize of the current queue
+
+   Actual Implementation:
+
+8. returnArr()
+
+   Function Prototype: int* returnArr(void)
+
+   Funcionality: Returns the pointer to the given array
+
+   Actual Implementation:
+
+
+
+
+
 
