@@ -71,6 +71,14 @@ Methods to implement:
 
    Actual Implementation:
 
+8. peek()
+
+   Function Prototype: int peek(void)
+
+   Functionality: Returns the next in line item to be popped
+
+   Actual Implementation:
+
 
 
 
