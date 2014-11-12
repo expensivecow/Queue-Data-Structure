@@ -6,53 +6,72 @@
 #include <iostream>
 #include "Queue.h"
 
-myQueue::myQueue(int startingTop, int startingLength) {
-  //TODO: implement
-  topIndex = startingTop;
+myQueue::myQueue(int startingHead, int startingLength) {
+  head = startingHead;
   maxSize = startingLength;
   p = new int[startingLength];
   return;
 }
 
 bool myQueue::empty() {
-  //TODO: implement
-  return false;
+  return (head == 0 ? true : false);
 }
 
 int myQueue::size() {
-  //TODO: implement
-  return 0;
+  return head;
 }
 
 void myQueue::push(int pushVal) {
-  //TODO: implement
-  return;
+  if(head == maxSize) {
+    reSize(2*maxSize); //double the size of the array
+  }
+  int j;
+  for(int i = head; i > 0; i--) {
+    j = i - 1;
+    p[i] = p[j];
+  }
+  p[0] = pushVal;
+  head++;
 }
 
 int myQueue::pop() {
-  //TODO: implement
-  return 0;
+  if(head == 0) {
+    return 0;
+  } else {
+    head--;
+    return p[head+1];
+  }
 }
 
 void myQueue::reSize(int capacity) {
-  //TODO: implement
-  return;
+  int* temp = p;
+  p = new int[capacity];
+  for(int i=0;i<capacity;i++) {
+    p[i] = temp[i];
+  }
+  maxSize *= 2;
+  delete temp;
+  temp = NULL;
 }
 
 void myQueue::displayQueue() {
-  //TODO: implement
-  return;
+  std::cout << std::endl << "Queue from head to back: ";
+  for(int i = head; i > 0; i--) {
+    std::cout << p[i] << " ";
+  }
+  std::cout << std::endl;
 }
 
 int myQueue::getMaxSize() {
-  //TODO: implement
-  return 0;
+  return maxSize;
 }
 
 int* myQueue::returnArr() {
-  //TODO: implement
   return p;
 }
 
+int myQueue::peek() {
+  return p[head];
+}
 
 

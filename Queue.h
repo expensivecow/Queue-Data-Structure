@@ -15,9 +15,10 @@ public:
   void displayQueue();
   int getMaxSize();
   int* returnArr();
+  int peek();
 
 private:
   int* p;
-  int topIndex;
+  int head;
   int maxSize;
 };
