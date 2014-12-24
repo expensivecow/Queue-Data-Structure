@@ -23,12 +23,11 @@ int myQueue::size() {
 
 void myQueue::push(int pushVal) {
   if(head == maxSize) {
-    reSize(2*maxSize); //double the size of the array
+    reSize(2*maxSize);
   }
-  int j;
-  for(int i = head; i > 0; i--) {
-    j = i - 1;
-    p[i] = p[j];
+  for(int i = head; i >= 0; i--) {
+    int j = p[i-1];
+    p[i] = j;
   }
   p[0] = pushVal;
   head++;
@@ -38,8 +37,8 @@ int myQueue::pop() {
   if(head == 0) {
     return 0;
   } else {
-    head--;
-    return p[head+1];
+    head = head-1;
+    return p[head];
   }
 }
 
@@ -55,8 +54,8 @@ void myQueue::reSize(int capacity) {
 }
 
 void myQueue::displayQueue() {
-  std::cout << std::endl << "Queue from head to back: ";
-  for(int i = head; i > 0; i--) {
+  std::cout << std::endl << "Queue from back to head: ";
+  for(int i = 0; i < head; i++) {
     std::cout << p[i] << " ";
   }
   std::cout << std::endl;
@@ -71,7 +70,12 @@ int* myQueue::returnArr() {
 }
 
 int myQueue::peek() {
-  return p[head];
+  if(head == 0) {
+    std::cout << "The queue is empty" << std::endl;
+    return 0;
+  } else {
+    return p[head-1];
+  }
 }
 
 
