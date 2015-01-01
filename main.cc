@@ -27,7 +27,7 @@ void runTests() {
   queue.displayQueue();
 
   unit.assertFalse("Queue should not be empty(#2)", queue.empty());
-  unit.assertEquals("Queue size should be 9(#4)", 9, queue.size());
+  unit.assertEquals("Queue size should be 8(#4)", 8, queue.size());
 
   myQueue emptyQueue (0,10);
 
@@ -35,7 +35,7 @@ void runTests() {
   unit.assertEquals("Popping empty queue should return 0(#7)", 0, emptyQueue.pop());
   unit.assertEquals("Peeking on first queue should output 7(#8)", 7, queue.peek());
   unit.assertEquals("Peeking on first queue again should still output 7(#8)", 7, queue.peek());
-  unit.assertEquals("Peeking on empty queue should still output 0(#9)", 0, queue.peek());
+  unit.assertEquals("Peeking on empty queue should still output 0(#9)", 0, emptyQueue.peek());
  
   unit.printResults();
   return;
